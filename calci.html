@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Calculator </title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2f4f4f;
+    color: #ffffff;
+    text-align: center;
+    padding: 50px;
+}
+
+h1 {
+    color: #00ced1;
+}
+
+input[type=text] {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #4682b4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5a9bd3;
+}
+
+#demo {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #00ced1;
+}
+
+#calculator-box {
+    background-color: #39424e;
+    border-radius: 10px;
+    padding: 20px;
+    display: inline-block;
+}
+
+/* Add layout enhancements */
+.input-container {
+    margin: 20px 0;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+</style>
+
+<script>
+function add(){
+    let a = parseInt(document.getElementById("t1").value);
+    let b = parseInt(document.getElementById("t2").value);
+    let c = a + b;
+    document.getElementById("demo").innerHTML = c;
+}
+
+function sub(){
+    let a = parseInt(document.getElementById("t1").value);
+    let b = parseint(document.getElementById("t2").value);
+    let c = a - b;
+    document.getElementById("demo").innerHTML = c;
+}
+
+function mul(){
+    let a = parseInt(document.getElementById("t1").value);
+    let b = parseInt(document.getElementById("t2").value);
+    let c = a * b;
+    document.getElementById("demo").innerHTML = c;
+}
+
+function div(){
+    let a = parseInt(document.getElementById("t1").value);
+    let b = parseInt(document.getElementById("t2").value);
+    let c = a / b;
+    document.getElementById("demo").innerHTML = c;
+}
+
+function fact(){
+    let d = parseInt(document.getElementById("t3").value);
+    let result = 1;
+    for (let i = d; i > 1; i--) {
+        result = result * i;
+    }
+    document.getElementById("demo").innerHTML = result;
+}
+</script>
+</head>
+<body>
+<div id="calculator-box">
+    <p id="demo"><b>Result</b></p>
+
+    <div class="input-container">
+        <label for="t1">Enter the first value:</label>
+        <input type="text" id="t1" name="txt1"><br>
+        <label for="t2">Enter the second value:</label>
+        <input type="text" id="t2" name="txt2"><br>
+    </div>
+
+    <div class="button-container">
+        <button type="button" onclick="add()">ADD</button>
+        <button type="button" onclick="sub()">SUB</button>
+        <button type="button" onclick="mul()">MUL</button>
+        <button type="button" onclick="div()">DIV</button>
+    </div>
+
+    <div class="input-container">
+        <label for="t3">Enter the number for factorial:</label>
+        <input type="text" id="t3" name="txt3"><br>
+    </div>
+
+    <div class="button-container">
+        <button type="button" onclick="fact()">Factorial</button>
+    </div>
+</div>
+</body>
+</html>
