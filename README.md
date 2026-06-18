@@ -1,1 +1,3 @@
-a simple calculator app using html ,css,js
+->simple calculator app using html ,css,js
+->Plan to implement next.js and make it like apple calculator using AI
+
